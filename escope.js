@@ -1021,6 +1021,10 @@
                     currentScope.__referencing(node.argument);
                     break;
 
+                case Syntax.YieldExpression:
+                    currentScope.__referencing(node.argument);
+                    break;
+
                 case Syntax.SequenceExpression:
                     for (i = 0, iz = node.expressions.length; i < iz; ++i) {
                         currentScope.__referencing(node.expressions[i]);
